@@ -1,0 +1,29 @@
+OrderID,Product,Category,Region,Quantity,Price
+1001,Laptop,Electronics,South,8,55000
+1002,Mobile,Electronics,North,15,20000
+1003,Headphones,Electronics,East,24,1500
+1004,Tablet,Electronics,West,10,18000
+1005,Smart Watch,Electronics,South,18,4500
+1006,Bluetooth Speaker,Electronics,North,20,2500
+1007,Shoes,Fashion,West,16,3000
+1008,Tshirt,Fashion,South,35,500
+1009,Jacket,Fashion,North,12,2500
+1010,Jeans,Fashion,East,22,1800
+1011,Handbag,Fashion,West,14,2200
+1012,Microwave,Appliances,North,9,10000
+1013,Refrigerator,Appliances,West,6,30000
+1014,Washing Machine,Appliances,South,7,28000
+1015,Air Conditioner,Appliances,East,5,36000
+1016,Mixer Grinder,Appliances,North,18,4500
+1017,Medicine Kit,Pharmacy,South,30,650
+1018,Sanitizer Pack,Pharmacy,East,40,180
+1019,Vitamins,Pharmacy,North,25,750
+1020,First Aid Box,Pharmacy,West,16,900
+1021,Rice Bag,Grocery,South,45,1200
+1022,Cooking Oil,Grocery,West,32,950
+1023,Tea Pack,Grocery,East,28,350
+1024,Spice Box,Grocery,North,26,500
+1025,Mobile,Electronics,South,12,20000
+1026,Shoes,Fashion,North,10,3000
+1027,Rice Bag,Grocery,East,20,1200
+1028,Medicine Kit,Pharmacy,West,12,650
