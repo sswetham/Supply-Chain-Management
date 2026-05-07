@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supply Chain Portal (C++)</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+
+<main class="portal-card dashboard-card">
+    <div class="badge">SC</div>
+    <h2>Supply Chain Management Portal</h2>
+    <p class="subtitle">Track product quantity by category across the verified chain</p>
+
+    <form action="/cgi-bin/supply.cgi" method="get">
+        <div class="field-group">
+            <span class="field-label">Select Category:</span>
+            <input type="hidden" name="category" id="category-value" value="All">
+            <div class="custom-select" id="category-select">
+                <button class="select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                    <span id="category-label">All</span>
+                    <span class="select-arrow"></span>
+                </button>
+                <div class="select-menu" role="listbox">
+                    <button type="button" class="select-option active" data-value="All" role="option">All</button>
+                    <button type="button" class="select-option" data-value="Electronics" role="option">Electronics</button>
+                    <button type="button" class="select-option" data-value="Fashion" role="option">Fashion</button>
+                    <button type="button" class="select-option" data-value="Appliances" role="option">Appliances</button>
+                    <button type="button" class="select-option" data-value="Pharmacy" role="option">Pharmacy</button>
+                    <button type="button" class="select-option" data-value="Grocery" role="option">Grocery</button>
+                </div>
+            </div>
+        </div>
+
+        <input type="submit" value="Show Data">
+    </form>
+
+    <div class="trust-row">
+        <span>Inventory</span>
+        <span>Traceability</span>
+        <span>Authenticity</span>
+    </div>
+</main>
+
+<script>
+    const customSelect = document.getElementById("category-select");
+    const trigger = customSelect.querySelector(".select-trigger");
+    const options = customSelect.querySelectorAll(".select-option");
+    const hiddenValue = document.getElementById("category-value");
+    const label = document.getElementById("category-label");
+
+    trigger.addEventListener("click", () => {
+        const isOpen = customSelect.classList.toggle("open");
+        trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+
+    options.forEach((option) => {
+        option.addEventListener("click", () => {
+            options.forEach((item) => item.classList.remove("active"));
+            option.classList.add("active");
+            hiddenValue.value = option.dataset.value;
+            label.textContent = option.textContent;
+            customSelect.classList.remove("open");
+            trigger.setAttribute("aria-expanded", "false");
+        });
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!customSelect.contains(event.target)) {
+            customSelect.classList.remove("open");
+            trigger.setAttribute("aria-expanded", "false");
+        }
+    });
+</script>
+
+</body>
+</html>

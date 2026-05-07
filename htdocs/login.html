@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+
+<main class="portal-card">
+    <div class="badge">ID</div>
+    <h2>Supply Chain Portal Login</h2>
+    <p class="subtitle">Secure product verification and tracking access</p>
+
+    <form action="/cgi-bin/login.cgi" method="post">
+        <label>
+            Username:
+            <input type="text" name="user">
+        </label>
+
+        <label>
+            Password:
+            <input type="password" name="pass">
+        </label>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <div class="trust-row">
+        <span>Verified</span>
+        <span>Tracked</span>
+        <span>Protected</span>
+    </div>
+</main>
+
+</body>
+</html>
